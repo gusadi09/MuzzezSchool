@@ -11,7 +11,7 @@ import SwiftUI
 struct Muzzez_SchoolApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginContentView()
         }
     }
 }
