@@ -5,8 +5,27 @@
 //  Created by Gus Adi on 28/04/21.
 //
 
+/**
+    Login Function : menggunakan fungsi dari firebase yang di sediakan oleh google itu sendiri, dimana tiap data login disimpan pada firebase yaitu salah satu service dari Google
+    
+    Dengan contoh syntax :
+    Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        if error != nil {
+            print(error?.localizedDescription ?? "")
+        } else {
+            print("success")
+            DispatchQueue.main.async {
+                self.navigationStack.push(HomeView(), withId: "Login")
+            }
+        }
+    }
+ 
+    Dengan bantuan navigationStack untuk melakukan perpindah page ke home.
+**/
+
 import SwiftUI
 import NavigationStack
+import FirebaseAuth
 
 struct LoginContentView: View {
     var body: some View {
@@ -43,9 +62,11 @@ struct Logo : View {
 }
 
 struct FormBox : View {
-    @State var username: String = ""
+    @State var email: String = ""
     @State var password: String = ""
     @State var isShowPass: Bool = false
+    @State var isActive: Bool = false
+    @EnvironmentObject private var navigationStack: NavigationStack
     var onCommit: (()->Void)?
     
     var body : some View {
@@ -53,7 +74,7 @@ struct FormBox : View {
             Text("Login").font(.title).bold()
                 .foregroundColor(.black)
             
-            TextField("Email", text: $username)
+            TextField("Email", text: $email)
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.secondary, lineWidth: 1)
@@ -99,7 +120,8 @@ struct FormBox : View {
             }
             
             Button(action: {
-                print("login pressed")
+                login()
+                
             }, label: {
                 HStack {
                     Spacer()
@@ -124,5 +146,18 @@ struct FormBox : View {
         .background(Color.white)
         .cornerRadius(10)
         .shadow(radius: 4, x: 0, y: 4)
+    }
+    
+    func login() {
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if error != nil {
+                print(error?.localizedDescription ?? "")
+            } else {
+                print("success")
+                DispatchQueue.main.async {
+                    self.navigationStack.push(HomeView(), withId: "Login")
+                }
+            }
+        }
     }
 }

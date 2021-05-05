@@ -5,12 +5,30 @@
 //  Created by Gus Adi on 28/04/21.
 //
 
+/**
+    Register Function : menggunakan fungsi dari firebase yang di sediakan oleh google itu sendiri, dimana sebelum login jika tidak memiliki akun akan melakukan registrasi email dan password yang nantinya disimpan pada server yang disediakan google firebase
+    
+    Dengan contoh syntax :
+    Auth.auth().createUser(withEmail: email, password: password) { result, err in
+        if err != nil {
+            print(err?.localizedDescription ?? "")
+        } else {
+            print("success")
+            DispatchQueue.main.async {
+                self.navStack.pop(to: .previous)
+            }
+        }
+    }
+ 
+    Dengan bantuan navigationStack untuk melakukan perpindah page ke Login.
+**/
+
 import SwiftUI
 import NavigationStack
+import FirebaseAuth
 
 struct DaftarContentView: View {
     var body: some View {
-        
         ZStack {
             Image("bg")
                 .resizable()
@@ -43,7 +61,7 @@ struct LogoDaftar : View {
 }
 
 struct FormBoxDaftar : View {
-    @State var username: String = ""
+    @State var email: String = ""
     @State var password: String = ""
     @State var rePass: String = ""
     @State var isChecked: Bool = false
@@ -59,7 +77,7 @@ struct FormBoxDaftar : View {
             Text("Register").font(.title).bold()
                 .foregroundColor(.black)
             
-            TextField("Email", text: $username)
+            TextField("Email", text: $email)
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 12)
                             .stroke(Color.secondary, lineWidth: 1)
@@ -168,5 +186,18 @@ struct FormBoxDaftar : View {
         .background(Color.white)
         .cornerRadius(10)
         .shadow(radius: 4, x: 0, y: 4)
+    }
+    
+    func register() {
+        Auth.auth().createUser(withEmail: email, password: password) { result, err in
+            if err != nil {
+                print(err?.localizedDescription ?? "")
+            } else {
+                print("success")
+                DispatchQueue.main.async {
+                    self.navStack.pop(to: .previous)
+                }
+            }
+        }
     }
 }

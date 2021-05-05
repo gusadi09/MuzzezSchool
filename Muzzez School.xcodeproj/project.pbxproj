@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		95912FAC32515452C42F82D8 /* Pods_Muzzez_School.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */; };
+		EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C222642292F00FB8F3D /* HomeView.swift */; };
+		EC2D7C252642325900FB8F3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */; };
+		EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C262642381E00FB8F3D /* AccountView.swift */; };
+		EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2826423D3500FB8F3D /* CourseView.swift */; };
+		EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */; };
 		ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */; };
 		ECCBC29A2639210D0022714F /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2992639210D0022714F /* LoginContentView.swift */; };
 		ECCBC29C263921100022714F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCBC29B263921100022714F /* Assets.xcassets */; };
@@ -18,6 +23,11 @@
 /* Begin PBXFileReference section */
 		619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muzzez_School.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C8C719712C609A8C368C76 /* Pods-Muzzez School.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muzzez School.release.xcconfig"; path = "Target Support Files/Pods-Muzzez School/Pods-Muzzez School.release.xcconfig"; sourceTree = "<group>"; };
+		EC2D7C222642292F00FB8F3D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC2D7C262642381E00FB8F3D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		EC2D7C2826423D3500FB8F3D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFrstView.swift; sourceTree = "<group>"; };
 		ECCBC2942639210D0022714F /* Muzzez School.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muzzez School.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muzzez_SchoolApp.swift; sourceTree = "<group>"; };
 		ECCBC2992639210D0022714F /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
@@ -54,8 +64,34 @@
 				FDE74F1EF4A7AD97A807B5FE /* Pods-Muzzez School.debug.xcconfig */,
 				85C8C719712C609A8C368C76 /* Pods-Muzzez School.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC2D7C1F264228AA00FB8F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ECCBC2992639210D0022714F /* LoginContentView.swift */,
+				ECCBC2A9263930700022714F /* DaftarContentView.swift */,
+				EC2D7C222642292F00FB8F3D /* HomeView.swift */,
+				EC2D7C262642381E00FB8F3D /* AccountView.swift */,
+				EC2D7C2826423D3500FB8F3D /* CourseView.swift */,
+				EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EC2D7C20264228B500FB8F3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC2D7C21264228BF00FB8F3D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		ECCBC28B2639210D0022714F = {
@@ -80,9 +116,11 @@
 			isa = PBXGroup;
 			children = (
 				ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */,
-				ECCBC2992639210D0022714F /* LoginContentView.swift */,
-				ECCBC2A9263930700022714F /* DaftarContentView.swift */,
+				EC2D7C20264228B500FB8F3D /* Model */,
+				EC2D7C1F264228AA00FB8F3D /* View */,
+				EC2D7C21264228BF00FB8F3D /* ViewModels */,
 				ECCBC29B263921100022714F /* Assets.xcassets */,
+				EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */,
 				ECCBC2A0263921100022714F /* Info.plist */,
 				ECCBC29D263921100022714F /* Preview Content */,
 			);
@@ -158,6 +196,7 @@
 			files = (
 				ECCBC29F263921100022714F /* Preview Assets.xcassets in Resources */,
 				ECCBC29C263921100022714F /* Assets.xcassets in Resources */,
+				EC2D7C252642325900FB8F3D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +250,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCBC29A2639210D0022714F /* LoginContentView.swift in Sources */,
+				EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */,
+				EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */,
 				ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
+				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,
+				EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
