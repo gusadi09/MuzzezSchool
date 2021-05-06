@@ -24,6 +24,12 @@ struct HomeView: View {
                     Text("Course")
                 }
             
+            Text("Creative Space")
+                .tabItem {
+                    Image(systemName: "play.rectangle")
+                    Text("Creative Space")
+                }
+            
             AccountView()
                 .tabItem {
                     Image(systemName: "person")

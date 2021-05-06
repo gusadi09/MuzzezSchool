@@ -13,6 +13,12 @@
 		EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C262642381E00FB8F3D /* AccountView.swift */; };
 		EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2826423D3500FB8F3D /* CourseView.swift */; };
 		EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */; };
+		EC2D7C2D264248CF00FB8F3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2C264248CF00FB8F3D /* ContentView.swift */; };
+		EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2E2642494E00FB8F3D /* BlurView.swift */; };
+		EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C302642DD9900FB8F3D /* TipsCardView.swift */; };
+		EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C322642E1BC00FB8F3D /* Course.swift */; };
+		EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C342642E1F100FB8F3D /* Tips.swift */; };
+		EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C362642E52000FB8F3D /* DetailView.swift */; };
 		ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */; };
 		ECCBC29A2639210D0022714F /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2992639210D0022714F /* LoginContentView.swift */; };
 		ECCBC29C263921100022714F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCBC29B263921100022714F /* Assets.xcassets */; };
@@ -28,6 +34,12 @@
 		EC2D7C262642381E00FB8F3D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		EC2D7C2826423D3500FB8F3D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFrstView.swift; sourceTree = "<group>"; };
+		EC2D7C2C264248CF00FB8F3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC2D7C2E2642494E00FB8F3D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		EC2D7C302642DD9900FB8F3D /* TipsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCardView.swift; sourceTree = "<group>"; };
+		EC2D7C322642E1BC00FB8F3D /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		EC2D7C342642E1F100FB8F3D /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		EC2D7C362642E52000FB8F3D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		ECCBC2942639210D0022714F /* Muzzez School.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muzzez School.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muzzez_SchoolApp.swift; sourceTree = "<group>"; };
 		ECCBC2992639210D0022714F /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +88,10 @@
 				EC2D7C262642381E00FB8F3D /* AccountView.swift */,
 				EC2D7C2826423D3500FB8F3D /* CourseView.swift */,
 				EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */,
+				EC2D7C2C264248CF00FB8F3D /* ContentView.swift */,
+				EC2D7C2E2642494E00FB8F3D /* BlurView.swift */,
+				EC2D7C302642DD9900FB8F3D /* TipsCardView.swift */,
+				EC2D7C362642E52000FB8F3D /* DetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -83,6 +99,8 @@
 		EC2D7C20264228B500FB8F3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC2D7C322642E1BC00FB8F3D /* Course.swift */,
+				EC2D7C342642E1F100FB8F3D /* Tips.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,9 +268,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCBC29A2639210D0022714F /* LoginContentView.swift in Sources */,
+				EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */,
 				EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */,
+				EC2D7C2D264248CF00FB8F3D /* ContentView.swift in Sources */,
 				EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */,
+				EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */,
 				ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */,
+				EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */,
+				EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */,
+				EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
 				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,
 				EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */,
