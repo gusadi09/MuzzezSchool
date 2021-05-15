@@ -12,7 +12,11 @@ struct HomeFrstView: View {
     var courses = coursesData
     var tips = tipsDummy
     @State var showContent = false
-    @State var showDetail = false
+    @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
+    
+    private var viewController: UIViewController? {
+        self.viewControllerHolder.value
+    }
     
     var body: some View {
         NavigationView {
@@ -54,17 +58,20 @@ struct HomeFrstView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 30.0) {
                             ForEach(courses) { item in
-                                Button(action: { self.showContent.toggle() }) {
-                                    GeometryReader { geometry in
-                                        CourseLstView(title: item.title,
-                                                      image: item.image,
-                                                      color: item.color,
-                                                      shadowColor: item.shadowColor)
-                                            .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
-                                            .sheet(isPresented: self.$showContent) { ContentView() }
-                                    }
-                                    .frame(width: 246, height: 360)
+                                GeometryReader { geometry in
+                                    CourseLstView(title: item.title,
+                                                  image: item.image,
+                                                  color: item.color,
+                                                  shadowColor: item.shadowColor)
+                                        .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
+                                        .onTapGesture {
+                                            self.viewController?.present(style: .formSheet, builder: {
+                                                CourseDetailView()
+                                            })
+                                        }
                                 }
+                                .frame(width: 246, height: 360)
+                                
                             }
                         }
                         .padding(.horizontal)
@@ -82,14 +89,16 @@ struct HomeFrstView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 30.0) {
                             ForEach(tips) { item in
-                                Button(action: { self.showDetail.toggle() }) {
-                                    GeometryReader { geometry in
-                                        TipsCardView(title: item.title, image: item.image, color: item.color)
-                                            .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
-                                            .sheet(isPresented: self.$showDetail) { DetailView() }
-                                    }
-                                    .frame(width: 300, height: 250)
+                                GeometryReader { geometry in
+                                    TipsCardView(title: item.title, image: item.image, color: item.color)
+                                        .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
+                                        .onTapGesture {
+                                            self.viewController?.present(style: .formSheet, builder: {
+                                                DetailView()
+                                            })
+                                        }
                                 }
+                                .frame(width: 220, height: 220)
                             }
                         }
                         .padding(.horizontal)
@@ -170,9 +179,9 @@ let coursesData = [
 ]
 
 let tipsDummy = [
-    Tips(title: "Take care your instrument", image: "Illustration4", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "Illustration4", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "Illustration4", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "Illustration4", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "Illustration4", color: Color(.orange))
+    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
+    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
+    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
+    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
+    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange))
 ]

@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		95912FAC32515452C42F82D8 /* Pods_Muzzez_School.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */; };
+		EC0DBF61264F67C2004C98B9 /* CustomPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */; };
+		EC0DBF62264F67C2004C98B9 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF5F264F67C2004C98B9 /* Indicator.swift */; };
+		EC0DBF63264F67C2004C98B9 /* NavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF60264F67C2004C98B9 /* NavigationBarColor.swift */; };
+		EC0DBF67264F6DB3004C98B9 /* CourseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF66264F6DB3004C98B9 /* CourseCellView.swift */; };
 		EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C222642292F00FB8F3D /* HomeView.swift */; };
 		EC2D7C252642325900FB8F3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */; };
 		EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C262642381E00FB8F3D /* AccountView.swift */; };
 		EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2826423D3500FB8F3D /* CourseView.swift */; };
 		EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */; };
-		EC2D7C2D264248CF00FB8F3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2C264248CF00FB8F3D /* ContentView.swift */; };
+		EC2D7C2D264248CF00FB8F3D /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2C264248CF00FB8F3D /* CourseDetailView.swift */; };
 		EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2E2642494E00FB8F3D /* BlurView.swift */; };
 		EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C302642DD9900FB8F3D /* TipsCardView.swift */; };
 		EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C322642E1BC00FB8F3D /* Course.swift */; };
@@ -29,12 +33,16 @@
 /* Begin PBXFileReference section */
 		619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muzzez_School.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C8C719712C609A8C368C76 /* Pods-Muzzez School.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muzzez School.release.xcconfig"; path = "Target Support Files/Pods-Muzzez School/Pods-Muzzez School.release.xcconfig"; sourceTree = "<group>"; };
+		EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentViewController.swift; sourceTree = "<group>"; };
+		EC0DBF5F264F67C2004C98B9 /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		EC0DBF60264F67C2004C98B9 /* NavigationBarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarColor.swift; sourceTree = "<group>"; };
+		EC0DBF66264F6DB3004C98B9 /* CourseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellView.swift; sourceTree = "<group>"; };
 		EC2D7C222642292F00FB8F3D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC2D7C262642381E00FB8F3D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		EC2D7C2826423D3500FB8F3D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFrstView.swift; sourceTree = "<group>"; };
-		EC2D7C2C264248CF00FB8F3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC2D7C2C264248CF00FB8F3D /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		EC2D7C2E2642494E00FB8F3D /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		EC2D7C302642DD9900FB8F3D /* TipsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCardView.swift; sourceTree = "<group>"; };
 		EC2D7C322642E1BC00FB8F3D /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -79,19 +87,39 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		EC2D7C1F264228AA00FB8F3D /* View */ = {
+		EC0DBF64264F67D6004C98B9 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				EC2D7C2E2642494E00FB8F3D /* BlurView.swift */,
+				EC2D7C302642DD9900FB8F3D /* TipsCardView.swift */,
+				EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */,
+				EC0DBF5F264F67C2004C98B9 /* Indicator.swift */,
+				EC0DBF60264F67C2004C98B9 /* NavigationBarColor.swift */,
+				EC0DBF66264F6DB3004C98B9 /* CourseCellView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		EC0DBF65264F67E7004C98B9 /* AuthenticationView */ = {
 			isa = PBXGroup;
 			children = (
 				ECCBC2992639210D0022714F /* LoginContentView.swift */,
 				ECCBC2A9263930700022714F /* DaftarContentView.swift */,
+			);
+			path = AuthenticationView;
+			sourceTree = "<group>";
+		};
+		EC2D7C1F264228AA00FB8F3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EC0DBF65264F67E7004C98B9 /* AuthenticationView */,
 				EC2D7C222642292F00FB8F3D /* HomeView.swift */,
 				EC2D7C262642381E00FB8F3D /* AccountView.swift */,
 				EC2D7C2826423D3500FB8F3D /* CourseView.swift */,
 				EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */,
-				EC2D7C2C264248CF00FB8F3D /* ContentView.swift */,
-				EC2D7C2E2642494E00FB8F3D /* BlurView.swift */,
-				EC2D7C302642DD9900FB8F3D /* TipsCardView.swift */,
+				EC2D7C2C264248CF00FB8F3D /* CourseDetailView.swift */,
 				EC2D7C362642E52000FB8F3D /* DetailView.swift */,
+				EC0DBF64264F67D6004C98B9 /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,17 +296,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECCBC29A2639210D0022714F /* LoginContentView.swift in Sources */,
+				EC0DBF67264F6DB3004C98B9 /* CourseCellView.swift in Sources */,
 				EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */,
 				EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */,
-				EC2D7C2D264248CF00FB8F3D /* ContentView.swift in Sources */,
+				EC2D7C2D264248CF00FB8F3D /* CourseDetailView.swift in Sources */,
 				EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */,
 				EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */,
 				ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */,
+				EC0DBF63264F67C2004C98B9 /* NavigationBarColor.swift in Sources */,
+				EC0DBF61264F67C2004C98B9 /* CustomPresentViewController.swift in Sources */,
 				EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */,
 				EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */,
 				EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
 				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,
+				EC0DBF62264F67C2004C98B9 /* Indicator.swift in Sources */,
 				EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

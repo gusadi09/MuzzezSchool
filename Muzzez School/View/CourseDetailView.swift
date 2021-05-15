@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CourseDetailView: View {
 
    @State var show = false
    @State var viewState = CGSize.zero
@@ -27,7 +27,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
    static var previews: some View {
-      ContentView()
+      CourseDetailView()
    }
 }
 
