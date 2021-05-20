@@ -10,7 +10,6 @@ import SwiftUI
 struct TipsCardView: View {
     var title = "Build an app with SwiftUI"
     var image = "guitarImg"
-    var color = Color("background3")
     
     var body: some View {
         ZStack {
@@ -34,7 +33,8 @@ struct TipsCardView: View {
         }
         .frame(width: 220, height: 180)
         .cornerRadius(20)
-        .shadow(color: .black.opacity(0.25), radius: 10, x: 0, y: 4)
+        .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0.0, y: 4)
+        //.shadow(color: .black.opacity(0.25), radius: 10, x: 0, y: 4)
     }
 }
 

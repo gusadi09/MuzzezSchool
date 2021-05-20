@@ -65,8 +65,9 @@ struct HomeFrstView: View {
                                                   shadowColor: item.shadowColor)
                                         .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                                         .onTapGesture {
-                                            self.viewController?.present(style: .formSheet, builder: {
+                                            self.viewController?.present(style: .fullScreen, builder: {
                                                 CourseDetailView()
+                                                  .ignoresSafeArea()
                                             })
                                         }
                                 }
@@ -90,11 +91,12 @@ struct HomeFrstView: View {
                         HStack(spacing: 30.0) {
                             ForEach(tips) { item in
                                 GeometryReader { geometry in
-                                    TipsCardView(title: item.title, image: item.image, color: item.color)
+                                    TipsCardView(title: item.title, image: item.image)
                                         .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                                         .onTapGesture {
-                                            self.viewController?.present(style: .formSheet, builder: {
-                                                DetailView()
+                                            self.viewController?.present(style: .fullScreen, builder: {
+                                              DetailView(item: item)
+                                                  .ignoresSafeArea()
                                             })
                                         }
                                 }
@@ -179,9 +181,9 @@ let coursesData = [
 ]
 
 let tipsDummy = [
-    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange)),
-    Tips(title: "Take care your instrument", image: "guitarImg", color: Color(.orange))
+    Tips(title: "Take care your instrument", image: "guitarImg"),
+    Tips(title: "Take care your instrument", image: "guitarImg"),
+    Tips(title: "Take care your instrument", image: "guitarImg"),
+    Tips(title: "Take care your instrument", image: "guitarImg"),
+    Tips(title: "Take care your instrument", image: "guitarImg")
 ]

@@ -16,7 +16,11 @@ struct Muzzez_SchoolApp: App {
     
     var body: some Scene {
         WindowGroup {
+          if Auth.auth().currentUser != nil {
+            HomeView()
+          } else {
             LoginContentView()
+          }
         }
     }
 }
