@@ -17,11 +17,17 @@ struct HomeView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
+          
+          Text("Search")
+              .tabItem {
+                  Image(systemName: "magnifyingglass")
+                  Text("Search")
+              }
             
             CourseView()
                 .tabItem {
                     Image(systemName: "book")
-                    Text("Course")
+                    Text("My Course")
                 }
             
             Text("Creative Space")

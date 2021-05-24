@@ -12,7 +12,7 @@ struct DetailView: View {
   @State var viewState = CGSize.zero
   @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
   
-  var item: Tips = Tips(title: "test", image: "guitarImg")
+  var item: Tips = Tips(title: "test", image: "guitarImg", isi: "test")
   
   private var viewController: UIViewController? {
     self.viewControllerHolder.value
@@ -43,6 +43,10 @@ struct DetailView: View {
             
             Spacer()
           }
+          
+          Text(item.isi)
+            .padding(.horizontal)
+            .padding(.bottom, 40)
         }
         
         HStack {
@@ -58,6 +62,21 @@ struct DetailView: View {
               .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0.0, y: 4)
           })
           .padding(.leading)
+          .padding(.top, 60)
+          
+          Spacer()
+          
+          Button(action: {
+          }, label: {
+            
+            Image(systemName: "square.and.arrow.up")
+              .padding()
+              .background(Color(.white))
+              .foregroundColor(.black)
+              .cornerRadius(10)
+              .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0.0, y: 4)
+          })
+          .padding(.trailing)
           .padding(.top, 60)
         }
         

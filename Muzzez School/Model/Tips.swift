@@ -9,7 +9,8 @@ import Foundation
 import SwiftUI
 
 struct Tips: Identifiable {
-    var id = UUID()
-    var title: String
-    var image: String
+  var id = UUID()
+  var title: String
+  var image: String
+  var isi: String
 }
