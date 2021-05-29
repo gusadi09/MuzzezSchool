@@ -30,6 +30,10 @@
 		ECCBC29C263921100022714F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCBC29B263921100022714F /* Assets.xcassets */; };
 		ECCBC29F263921100022714F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCBC29E263921100022714F /* Preview Assets.xcassets */; };
 		ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2A9263930700022714F /* DaftarContentView.swift */; };
+		ECE5698D2661C3B6008DD061 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5698C2661C3B6008DD061 /* CartButton.swift */; };
+		ECE569902661CADD008DD061 /* CourseLstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5698F2661CADD008DD061 /* CourseLstView.swift */; };
+		ECE569A92661E4E8008DD061 /* LoadDataCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE569A82661E4E8008DD061 /* LoadDataCourse.swift */; };
+		ECE569AD2661ED3F008DD061 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE569AC2661ED3F008DD061 /* ImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		ECCBC29E263921100022714F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ECCBC2A0263921100022714F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECCBC2A9263930700022714F /* DaftarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarContentView.swift; sourceTree = "<group>"; };
+		ECE5698C2661C3B6008DD061 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		ECE5698F2661CADD008DD061 /* CourseLstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLstView.swift; sourceTree = "<group>"; };
+		ECE569A82661E4E8008DD061 /* LoadDataCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataCourse.swift; sourceTree = "<group>"; };
+		ECE569AC2661ED3F008DD061 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		FDE74F1EF4A7AD97A807B5FE /* Pods-Muzzez School.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muzzez School.debug.xcconfig"; path = "Target Support Files/Pods-Muzzez School/Pods-Muzzez School.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +108,9 @@
 				EC0DBF5F264F67C2004C98B9 /* Indicator.swift */,
 				EC0DBF60264F67C2004C98B9 /* NavigationBarColor.swift */,
 				EC0DBF66264F6DB3004C98B9 /* CourseCellView.swift */,
+				ECE5698C2661C3B6008DD061 /* CartButton.swift */,
+				ECE5698F2661CADD008DD061 /* CourseLstView.swift */,
+				ECE569AC2661ED3F008DD061 /* ImageLoader.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -137,11 +148,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		EC2D7C21264228BF00FB8F3D /* ViewModels */ = {
+		EC2D7C21264228BF00FB8F3D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				ECE569A82661E4E8008DD061 /* LoadDataCourse.swift */,
 			);
-			path = ViewModels;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		EC46AF34265B34E200B94879 /* DummyData */ = {
@@ -178,7 +190,7 @@
 				ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */,
 				EC2D7C20264228B500FB8F3D /* Model */,
 				EC2D7C1F264228AA00FB8F3D /* View */,
-				EC2D7C21264228BF00FB8F3D /* ViewModels */,
+				EC2D7C21264228BF00FB8F3D /* Services */,
 				ECCBC29B263921100022714F /* Assets.xcassets */,
 				EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */,
 				ECCBC2A0263921100022714F /* Info.plist */,
@@ -318,14 +330,18 @@
 				EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */,
 				EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */,
 				ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */,
+				ECE5698D2661C3B6008DD061 /* CartButton.swift in Sources */,
 				EC46AF3A265B359B00B94879 /* CourseDummy.swift in Sources */,
 				EC0DBF63264F67C2004C98B9 /* NavigationBarColor.swift in Sources */,
 				EC0DBF61264F67C2004C98B9 /* CustomPresentViewController.swift in Sources */,
 				EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */,
 				EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */,
+				ECE569AD2661ED3F008DD061 /* ImageLoader.swift in Sources */,
 				EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
 				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,
+				ECE569A92661E4E8008DD061 /* LoadDataCourse.swift in Sources */,
+				ECE569902661CADD008DD061 /* CourseLstView.swift in Sources */,
 				EC0DBF62264F67C2004C98B9 /* Indicator.swift in Sources */,
 				EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */,
 			);
