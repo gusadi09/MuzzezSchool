@@ -23,28 +23,38 @@
 
 import SwiftUI
 import FirebaseAuth
-import NavigationStack
+import Firebase
+import Kingfisher
 
 struct AccountView: View {
-  @EnvironmentObject var navStack: NavigationStack
+  
+  @State var currUser = Auth.auth().currentUser
+  @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
+  @ObservedObject var dataUser = LoadDataUser()
+  
+  private var viewController: UIViewController? {
+    self.viewControllerHolder.value
+  }
   
   var body: some View {
     NavigationView {
       VStack {
-        Image("avatar")
+        KFImage(URL(string: dataUser.data?.image ?? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT18iwsdCCbBfpa50-5BmNa_m_BX087_x1oWQ&usqp=CAU"))
+          .loadDiskFileSynchronously()
+          .cacheMemoryOnly()
+          .fade(duration: 0.25)
           .resizable()
-          .renderingMode(.original)
           .frame(width: 100, height: 100)
           .cornerRadius(50)
           .padding()
           .padding(.top)
         
-        Text("Nama")
+        Text(dataUser.data?.nama ?? "Test")
           .font(.system(size: 22))
           .fontWeight(.bold)
           .padding(.bottom)
         
-        Text("Email")
+        Text(currUser?.email ?? "Email")
           .font(.system(size: 20))
           .fontWeight(.semibold)
           .padding(.bottom)
@@ -71,12 +81,18 @@ struct AccountView: View {
         .navigationTitle("Account")
       }
     }
+    .onAppear(perform: {
+      self.dataUser.fetchData()
+    })
   }
   
   func logout() {
     do {
       try Auth.auth().signOut()
-      self.navStack.pop(to: .previous)
+      self.viewController?.present(style: .fullScreen, builder: {
+        LoginContentView()
+          .ignoresSafeArea()
+      })
     } catch let signOutError as NSError {
       print ("Error signing out: %@", signOutError)
     }

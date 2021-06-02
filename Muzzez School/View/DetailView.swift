@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct DetailView: View {
   @State var show = false
@@ -34,7 +35,11 @@ struct DetailView: View {
             .padding(.top, 120)
           
           VStack {
-            Image(item.image)
+            KFImage(URL(string: item.image))
+              .resizable()
+              .loadDiskFileSynchronously()
+              .cacheMemoryOnly()
+              .fade(duration: 0.25)
               .resizable()
               .cornerRadius(20)
               .frame(height: 220)
@@ -44,9 +49,17 @@ struct DetailView: View {
             Spacer()
           }
           
-          Text(item.isi)
-            .padding(.horizontal)
-            .padding(.bottom, 40)
+          VStack {
+            ForEach(item.isi.components(separatedBy: "\\n"), id: \.self) { i in
+              
+              Text("\(i)")
+                .multilineTextAlignment(.leading)
+                .padding(.bottom, 5)
+              
+            }
+          }
+          .padding(.horizontal)
+          .padding(.bottom, 40)
         }
         
         HStack {

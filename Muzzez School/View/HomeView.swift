@@ -9,48 +9,50 @@ import SwiftUI
 import NavigationStack
 
 struct HomeView: View {
-    var body: some View {
-        
-        TabView {
-            HomeFrstView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-          
-          Text("Search")
-              .tabItem {
-                  Image(systemName: "magnifyingglass")
-                  Text("Search")
-              }
-            
-            CourseView()
-                .tabItem {
-                    Image(systemName: "book")
-                    Text("My Course")
-                }
-            
-            Text("Creative Space")
-                .tabItem {
-                    Image(systemName: "play.rectangle")
-                    Text("Creative Space")
-                }
-            
-            AccountView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Account")
-                }
+  
+  
+  var body: some View {
+    
+    TabView {
+      HomeFrstView()
+        .tabItem {
+          Image(systemName: "house")
+          Text("Home")
         }
-        
-        
+      
+      Text("Search")
+        .tabItem {
+          Image(systemName: "magnifyingglass")
+          Text("Search")
+        }
+      
+      CourseView()
+        .tabItem {
+          Image(systemName: "book")
+          Text("My Course")
+        }
+      
+      WishlistView()
+        .tabItem {
+          Image(systemName: "heart")
+          Text("Wishlist")
+        }
+      
+      AccountView()
+        .tabItem {
+          Image(systemName: "person")
+          Text("Account")
+        }
     }
+    
+    
+  }
 }
 
 struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            HomeView()
-        }
+  static var previews: some View {
+    Group {
+      HomeView()
     }
+  }
 }

@@ -11,43 +11,66 @@ import Combine
 import Firebase
 
 class LoadDataCourse: ObservableObject {
-  @Published var data = [Courses]()
   
-  init() {
-    let db = Firestore.firestore()
+  let objectWillChange = ObservableObjectPublisher()
+  
+  @Published var data = [Courses]() {
+    willSet {
+      objectWillChange.send()
+    }
+  }
+  @Published var count = 1
+  
+  var dataKur = [Kurikulum]()
+  private let db = Firestore.firestore()
+  
+  func fetchData() {
+    db.collection("courses").addSnapshotListener { (qSnapshot, err) in
+      guard let documents = qSnapshot?.documents else {
+        print("No Document")
+        return
+      }
+      
+      self.data = documents.map { (qDocSnap) -> Courses in
+        let data = qDocSnap.data()
+        
+        let id = data["id"] as? Int
+        let name = data["nama"] as? String
+        let images = data["image"] as? String
+        let prices = data["harga"] as? Int
+        let ratings = data["rating"] as? Double
+        let desk = data["deskripsi"] as? String
+        let comp = data["complete"] as? Bool
+        let isbuy = data["isBuy"] as? Bool
+        let wish = data["isWishlist"] as? Bool
+        
+        self.fetchKur(id: id ?? 0)
+        
+        return Courses(id: id ?? 0, nama: name ?? "", image: images ?? "", harga: prices ?? 0, rating: ratings ?? 0.0, deskripsi: desk ?? "", complete: comp ?? false, isBuy: isbuy ?? false, isWishlist: wish ?? false, kurikulum: self.dataKur)
+      }
+    }
     
-    db.collection("courses").addSnapshotListener { (query, error) in
-      DispatchQueue.main.async {
-        if error != nil {
-          print(error?.localizedDescription ?? "")
-          return
-        } else {
-          print("No error")
-          if let snap = query?.documentChanges {
-            for i in snap {
-              let name = i.document.get("nama") as? String
-              let images = i.document.get("image") as? String
-              let prices = i.document.get("harga") as? Int
-              let ratings = i.document.get("rating") as? Double
-              let desk = i.document.get("deskripsi") as? String
-              let comp = i.document.get("complete") as? Bool
-              let isbuy = i.document.get("isBuy") as? Bool
-              
-              let newdata = Courses(nama: name ?? "Test",
-                                    image: images ?? "https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-                                    harga: prices ?? 0,
-                                    rating: ratings ?? 0.0,
-                                    deskripsi: desk ?? "",
-                                    complete: comp ?? false,
-                                    isBuy: isbuy ?? false)
-              
-              self.data.append(newdata)
-            }
-            
-            print(self.data)
-          }
-        }
+    print(self.data)
+  }
+  
+  func fetchKur(id: Int) {
+    self.db.collection("courses").document("\(id)").collection("kurikulum").addSnapshotListener { (qs, err) in
+      guard let documents = qs?.documents else {
+        print("No Document")
+        return
+      }
+      
+      self.dataKur = documents.map { (qDocSnap) -> Kurikulum in
+        let data = qDocSnap.data()
+        
+        let title = data["title"] as? String
+        let comp = data["done"] as? Bool
+        let vid = data["videourl"] as? String
+        let datas = Kurikulum(done: comp ?? false, title: title ?? "", videourl: vid ?? "")
+        
+        return datas
       }
     }
   }
+  
 }

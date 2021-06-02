@@ -10,6 +10,7 @@ import Firebase
 
 @main
 struct Muzzez_SchoolApp: App {
+  
     init() {
         FirebaseApp.configure()
     }

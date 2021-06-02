@@ -6,35 +6,38 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CourseLstView: View {
   
-  var title = "Build an app with SwiftUI"
-  var price = 30000
-  var rating = 5.0
-  
-  @ObservedObject var imageLoader:ImageLoader
-  @State var images: UIImage = UIImage()
-  
-  init(withURL url:String, title: String, price: Int, rating: Double) {
-    imageLoader = ImageLoader(urlString:url)
-    self.title = title
-    self.price = price
-    self.rating = rating
-  }
+  var item: Courses?
   
   var body: some View {
     return VStack(alignment: .leading) {
-      Image(uiImage: images)
-        .resizable()
-        .renderingMode(.original)
-        .aspectRatio(contentMode: .fill)
-        .frame(width: 246, height: 150)
-        .padding(.bottom, 20)
+      ZStack(alignment: .topTrailing) {
+        KFImage(URL(string: item?.image ?? ""))
+          .resizable()
+          .loadDiskFileSynchronously()
+          .cacheMemoryOnly()
+          .fade(duration: 0.25)
+          .aspectRatio(contentMode: .fill)
+          .frame(width: 246, height: 150)
+          .padding(.bottom, 20)
+        
+        if item?.isWishlist ?? true {
+          Image(systemName: "heart.fill")
+            .padding()
+            .foregroundColor(.red)
+        } else {
+          Image(systemName: "heart")
+            .padding()
+            .foregroundColor(.red)
+        }
+      }
       
       Spacer()
       
-      Text(title)
+      Text(item?.nama ?? "")
         .font(.system(size: 22))
         .fontWeight(.bold)
         .foregroundColor(.black)
@@ -50,14 +53,14 @@ struct CourseLstView: View {
           .padding(.leading, 20)
           .padding(.bottom, 5)
         
-        Text("\(String(format: "%.1f", rating)) / 10")
+        Text("\(String(format: "%.1f", item?.rating ?? 0.0)) / 5")
           .font(.system(size: 18))
           .foregroundColor(.black)
           .padding(.bottom, 5)
           .lineLimit(4)
       }
       
-      Text("Rp. \(price)")
+      Text("Rp. \(item?.harga ?? 0)")
         .font(.system(size: 20))
         .foregroundColor(.black)
         .padding(.horizontal, 20)
@@ -73,6 +76,6 @@ struct CourseLstView: View {
 
 struct CourseLstView_Previews: PreviewProvider {
   static var previews: some View {
-    CourseLstView(withURL: "https://images.pexels.com/photos/1407322/pexels-photo-1407322.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", title: "Test", price: 0, rating: 0.0)
+    CourseLstView()
   }
 }

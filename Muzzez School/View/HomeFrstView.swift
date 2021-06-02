@@ -9,11 +9,12 @@ import SwiftUI
 
 struct HomeFrstView: View {
   
-  var tips = TipsDummy().tipsDummy
   @State var showContent = false
   @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
   
   @ObservedObject var dataCourse = LoadDataCourse()
+  
+  @ObservedObject var dataTips = LoadTipsData()
   
   private var viewController: UIViewController? {
     self.viewControllerHolder.value
@@ -27,29 +28,32 @@ struct HomeFrstView: View {
             VStack {
               HStack {
                 Text("Music is for everyone")
-                  .font(.system(size: 40))
+                  .font(.system(size: 36))
                   .fontWeight(.bold)
-                  .foregroundColor(.white)
-                  .padding(.vertical)
-                  .padding(.trailing)
+                  .foregroundColor(.black)
                 
                 Spacer()
               }
+              .padding(.all, 30)
               
               HStack {
                 Text("#MuzzezSchool")
                   .font(.system(size: 25))
                   .fontWeight(.bold)
-                  .foregroundColor(.white)
+                  .foregroundColor(.black)
                   .padding(.vertical)
+                  .padding(.bottom)
                 
                 Spacer()
               }
+              .padding(.horizontal, 30)
             }
-            .padding(.all, 30)
-            .background(Color("background9"))
+            .background(Color(.white))
             .cornerRadius(20)
+            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0.0, y: 4)
             .padding()
+            
+            
             
             Text("Recommended Course")
               .font(.system(size: 25))
@@ -59,15 +63,18 @@ struct HomeFrstView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
               HStack(spacing: 30.0) {
-                ForEach(dataCourse.data) { item in
+                ForEach(dataCourse.data, id: \.id) { item in
                   GeometryReader { geometry in
-                    CourseLstView(withURL: item.image, title: item.nama, price: item.harga, rating: item.rating)
+                    CourseLstView(item: item)
                       .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                       .onTapGesture {
-                        self.viewController?.present(style: .fullScreen, builder: {
-                          CourseDetailView()
-                            .ignoresSafeArea()
-                        })
+                        DispatchQueue.main.async {
+                          self.viewController?.present(style: .fullScreen, builder: {
+                            CourseDetailView(item: item, loveIcon: item.isWishlist)
+                              .ignoresSafeArea()
+                          })
+                          
+                        }
                       }
                   }
                   .frame(width: 246, height: 350)
@@ -88,9 +95,9 @@ struct HomeFrstView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
               HStack(spacing: 30.0) {
-                ForEach(tips) { item in
+                ForEach(dataTips.data) { item in
                   GeometryReader { geometry in
-                    TipsCardView(title: item.title, image: item.image)
+                    TipsCardView(title: item.title, image: URL(string: item.image))
                       .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                       .onTapGesture {
                         self.viewController?.present(style: .fullScreen, builder: {
@@ -114,11 +121,14 @@ struct HomeFrstView: View {
         CartButton()
           .padding()
           
-        
-        .navigationTitle("Home")
+          
+          .navigationTitle("Home")
       }
       
     }
+    .onAppear(perform: {
+      self.dataCourse.fetchData()
+    })
   }
 }
 
@@ -128,7 +138,4 @@ struct HomeFrstView_Previews: PreviewProvider {
     HomeFrstView()
   }
 }
-
-
-
 
