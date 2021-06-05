@@ -13,10 +13,10 @@ import Firebase
 class WriteDataService: ObservableObject {
   
   let objectWillChange = ObservableObjectPublisher()
-
+  
   private let db = Firestore.firestore()
   
-  func writeWishlist(kurikulum: [Kurikulum]?, id: Int?, isLove: Bool, nama: String?, image: String?, price: Int?, rate: Double?, desc: String?) {
+  func writeWishlist(kurikulum: [Kurikulum]?, id: Int?, isLove: Bool, nama: String?, image: String?, price: String?, rate: Double?, desc: String?) {
     let dataRef = db.collection("courses").document("\(id ?? 0)")
     var kurs = [[String: Any]]()
     
@@ -39,7 +39,7 @@ class WriteDataService: ObservableObject {
         "id": id ?? 0,
         "nama": nama ?? "",
         "image": image ?? "",
-        "harga": price ?? 0,
+        "harga": price ?? "",
         "rating": rate ?? 0.0,
         "deskripsi": desc ?? "",
         "isWishlist" : isLove,
@@ -60,7 +60,7 @@ class WriteDataService: ObservableObject {
     }
   }
   
-  func writeCart(kurikulum: [Kurikulum]?, isLove: Bool?, id: Int?, nama: String?, image: String?, price: Int?, rate: Double?, desc: String?) {
+  func writeMyCourse(kurikulum: [Kurikulum]?, id: Int?, nama: String?, image: String?, rate: Double?, desc: String?) {
     var kurs = [[String: Any]]()
     
     for i in kurikulum ?? [] {
@@ -73,15 +73,14 @@ class WriteDataService: ObservableObject {
       kurs.append(kur)
     }
     
-    db.collection("users").document(Auth.auth().currentUser?.uid ?? "").collection("cart").document("\(id ?? 0)").setData([
+    db.collection("users").document(Auth.auth().currentUser?.uid ?? "").collection("myCourse").document("\(id ?? 0)").setData([
       "id": id ?? 0,
       "nama": nama ?? "",
       "image": image ?? "",
-      "harga": price ?? 0,
       "rating": rate ?? 0.0,
       "deskripsi": desc ?? "",
-      "isWishlist" : isLove,
       "kurikulum": kurs
     ])
   }
 }
+

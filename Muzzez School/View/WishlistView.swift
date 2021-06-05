@@ -21,11 +21,11 @@ struct WishlistView: View {
       ScrollView(.vertical, showsIndicators: false) {
         VStack(spacing: 25) {
           ForEach(wishlistData.data?.wishlist ?? [], id: \.id) { item in
-            WishlistCard(item: item)
+            WishlistCard(item: item, harga: item.harga)
               .onTapGesture(perform: {
                 DispatchQueue.main.async {
                   self.viewController?.present(style: .fullScreen, builder: {
-                    CourseDetailView(item: item, loveIcon: item.isWishlist)
+                    CourseDetailView(item: item, harga: item.harga, loveIcon: item.isWishlist)
                       .ignoresSafeArea()
                   })
                 }

@@ -8,13 +8,17 @@
 import SwiftUI
 import Kingfisher
 import Firebase
+import StoreKit
 
 struct CourseDetailView: View {
   
   var item: Courses?
+  var harga = ""
   
   @ObservedObject var dataCourse = LoadDataCourse()
   @ObservedObject var writeServ = WriteDataService()
+  
+  @State private var isPresentedAlertFail = false
   
   @State var show = false
   @State var loveIcon = false
@@ -24,6 +28,8 @@ struct CourseDetailView: View {
   private var viewController: UIViewController? {
     self.viewControllerHolder.value
   }
+  
+  @StateObject var storeManager = StoreManager()
   
   var body: some View {
     ZStack {
@@ -74,6 +80,7 @@ struct CourseDetailView: View {
             }
           }
           .padding()
+          .padding(.bottom, 120)
           
         }
         
@@ -97,7 +104,7 @@ struct CourseDetailView: View {
             
             Button(action: {
               self.loveIcon.toggle()
-         
+              
               writeServ.writeWishlist(kurikulum: item?.kurikulum, id: item?.id, isLove: loveIcon, nama: item?.nama, image: item?.image, price: item?.harga, rate: item?.rating, desc: item?.deskripsi)
               
             }, label: {
@@ -126,7 +133,7 @@ struct CourseDetailView: View {
           Spacer()
           
           HStack {
-            Text("Rp. \(item?.harga ?? 999999999)")
+            Text("\(self.storeManager.myProducts?.localizedPrice ?? "")")
               .font(.system(size: 20))
               .fontWeight(.bold)
               .padding(.horizontal)
@@ -134,20 +141,43 @@ struct CourseDetailView: View {
             
             Spacer()
             
-            Button(action: {
-              writeServ.writeCart(kurikulum: item?.kurikulum, isLove: item?.isWishlist, id: item?.id, nama: item?.nama, image: item?.image, price: item?.harga, rate: item?.rating, desc: item?.deskripsi)
-            }, label: {
-              Image(systemName: "cart.badge.plus")
-                .resizable()
+            if UserDefaults.standard.bool(forKey: self.storeManager.myProducts?.productIdentifier ?? "") {
+              Text("Sudah Dibeli")
+                .font(.system(size: 18))
+                .fontWeight(.bold)
                 .foregroundColor(.white)
-                .frame(width: 40, height: 30, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 .padding()
                 .padding(.horizontal, 30)
-                .background(Color(.red))
+                .background(Color(.gray))
                 .cornerRadius(15)
-            })
-            .padding(.horizontal)
-            .padding(.vertical)
+                .padding(.horizontal)
+                .padding(.vertical)
+            } else {
+              Button(action: {
+                storeManager.purchaseProduct(product: self.storeManager.myProducts!)
+                if UserDefaults.standard.bool(forKey: self.storeManager.myProducts!.productIdentifier) {
+                  writeServ.writeMyCourse(kurikulum: item?.kurikulum, id: item?.id, nama: item?.nama, image: item?.image, rate: item?.rating, desc: item?.deskripsi)
+                  
+                  DispatchQueue.main.async {
+                    self.viewController?.present(style: .fullScreen, builder: {
+                      DoneBuyView()
+                        .ignoresSafeArea()
+                    })
+                  }
+                }
+              }, label: {
+                Text("Beli")
+                  .font(.system(size: 18))
+                  .fontWeight(.bold)
+                  .foregroundColor(.white)
+                  .padding()
+                  .padding(.horizontal, 30)
+                  .background(Color(.red))
+                  .cornerRadius(15)
+              })
+              .padding(.horizontal)
+              .padding(.vertical)
+            }
             
           }
           .padding(.bottom, 30)
@@ -156,6 +186,10 @@ struct CourseDetailView: View {
         }
       }
     }
+    .onAppear(perform: {
+      self.storeManager.getProducts(productIDs: harga)
+      SKPaymentQueue.default().add(storeManager)
+    })
   }
 }
 

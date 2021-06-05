@@ -11,6 +11,9 @@ import Kingfisher
 struct CourseLstView: View {
   
   var item: Courses?
+  var harga = ""
+  
+  @StateObject var storeManager = StoreManager()
   
   var body: some View {
     return VStack(alignment: .leading) {
@@ -60,7 +63,7 @@ struct CourseLstView: View {
           .lineLimit(4)
       }
       
-      Text("Rp. \(item?.harga ?? 0)")
+      Text("\(self.storeManager.myProducts?.localizedPrice ?? "")")
         .font(.system(size: 20))
         .foregroundColor(.black)
         .padding(.horizontal, 20)
@@ -71,6 +74,9 @@ struct CourseLstView: View {
     .cornerRadius(30)
     .frame(width: 246, height: 350)
     .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 20)
+    .onAppear(perform: {
+      self.storeManager.getProducts(productIDs: harga)
+    })
   }
 }
 

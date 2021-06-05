@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeFrstView: View {
   
   @State var showContent = false
+  
   @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
   
   @ObservedObject var dataCourse = LoadDataCourse()
@@ -65,12 +66,12 @@ struct HomeFrstView: View {
               HStack(spacing: 30.0) {
                 ForEach(dataCourse.data, id: \.id) { item in
                   GeometryReader { geometry in
-                    CourseLstView(item: item)
+                    CourseLstView(item: item, harga: item.harga)
                       .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                       .onTapGesture {
                         DispatchQueue.main.async {
                           self.viewController?.present(style: .fullScreen, builder: {
-                            CourseDetailView(item: item, loveIcon: item.isWishlist)
+                            CourseDetailView(item: item, harga: item.harga, loveIcon: item.isWishlist)
                               .ignoresSafeArea()
                           })
                           
@@ -117,9 +118,6 @@ struct HomeFrstView: View {
             
           }
         }
-        
-        CartButton()
-          .padding()
           
           
           .navigationTitle("Home")

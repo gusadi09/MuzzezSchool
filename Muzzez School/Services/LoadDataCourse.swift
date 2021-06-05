@@ -37,7 +37,7 @@ class LoadDataCourse: ObservableObject {
         let id = data["id"] as? Int
         let name = data["nama"] as? String
         let images = data["image"] as? String
-        let prices = data["harga"] as? Int
+        let prices = data["harga"] as? String
         let ratings = data["rating"] as? Double
         let desk = data["deskripsi"] as? String
         let comp = data["complete"] as? Bool
@@ -46,7 +46,7 @@ class LoadDataCourse: ObservableObject {
         
         self.fetchKur(id: id ?? 0)
         
-        return Courses(id: id ?? 0, nama: name ?? "", image: images ?? "", harga: prices ?? 0, rating: ratings ?? 0.0, deskripsi: desk ?? "", complete: comp ?? false, isBuy: isbuy ?? false, isWishlist: wish ?? false, kurikulum: self.dataKur)
+        return Courses(id: id ?? 0, nama: name ?? "", image: images ?? "", harga: prices ?? "", rating: ratings ?? 0.0, deskripsi: desk ?? "", complete: comp ?? false, isBuy: isbuy ?? false, isWishlist: wish ?? false, kurikulum: self.dataKur)
       }
     }
     

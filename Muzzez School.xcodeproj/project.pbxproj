@@ -11,7 +11,6 @@
 		EC0DBF61264F67C2004C98B9 /* CustomPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */; };
 		EC0DBF62264F67C2004C98B9 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF5F264F67C2004C98B9 /* Indicator.swift */; };
 		EC0DBF63264F67C2004C98B9 /* NavigationBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF60264F67C2004C98B9 /* NavigationBarColor.swift */; };
-		EC0DBF67264F6DB3004C98B9 /* CourseCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF66264F6DB3004C98B9 /* CourseCellView.swift */; };
 		EC252D2C266608DC002011FE /* KurikulumCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252D2B266608DC002011FE /* KurikulumCard.swift */; };
 		EC252D5A26671E49002011FE /* WriteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252D5926671E48002011FE /* WriteDataService.swift */; };
 		EC252D5E2667239D002011FE /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252D5D2667239D002011FE /* WishlistView.swift */; };
@@ -27,6 +26,10 @@
 		EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C322642E1BC00FB8F3D /* Course.swift */; };
 		EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C342642E1F100FB8F3D /* Tips.swift */; };
 		EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C362642E52000FB8F3D /* DetailView.swift */; };
+		EC624A22266B3E3F005B7834 /* MyCourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A21266B3E3F005B7834 /* MyCourseCard.swift */; };
+		EC624A25266B4262005B7834 /* DoneBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A24266B4262005B7834 /* DoneBuyView.swift */; };
+		EC624A29266B51B3005B7834 /* MyCourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A28266B51B3005B7834 /* MyCourseDetailView.swift */; };
+		EC624A2C266B5384005B7834 /* KurikulumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */; };
 		EC7CD07E2664CAE800DBB38E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD07D2664CAE800DBB38E /* Users.swift */; };
 		EC7CD0812665114300DBB38E /* LoadDataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0802665114300DBB38E /* LoadDataUser.swift */; };
 		ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */; };
@@ -34,7 +37,8 @@
 		ECCBC29C263921100022714F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCBC29B263921100022714F /* Assets.xcassets */; };
 		ECCBC29F263921100022714F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCBC29E263921100022714F /* Preview Assets.xcassets */; };
 		ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2A9263930700022714F /* DaftarContentView.swift */; };
-		ECE5698D2661C3B6008DD061 /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5698C2661C3B6008DD061 /* CartButton.swift */; };
+		ECE27DEC26691CCB00917E85 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE27DEB26691CCB00917E85 /* StoreKit.framework */; };
+		ECE27DEF2669D1C200917E85 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE27DEE2669D1C200917E85 /* StoreManager.swift */; };
 		ECE569902661CADD008DD061 /* CourseLstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE5698F2661CADD008DD061 /* CourseLstView.swift */; };
 		ECE569A92661E4E8008DD061 /* LoadDataCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE569A82661E4E8008DD061 /* LoadDataCourse.swift */; };
 		ECE569CE26629579008DD061 /* LoadTipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE569CD26629578008DD061 /* LoadTipsData.swift */; };
@@ -46,7 +50,6 @@
 		EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentViewController.swift; sourceTree = "<group>"; };
 		EC0DBF5F264F67C2004C98B9 /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		EC0DBF60264F67C2004C98B9 /* NavigationBarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBarColor.swift; sourceTree = "<group>"; };
-		EC0DBF66264F6DB3004C98B9 /* CourseCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCellView.swift; sourceTree = "<group>"; };
 		EC252D2B266608DC002011FE /* KurikulumCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurikulumCard.swift; sourceTree = "<group>"; };
 		EC252D5926671E48002011FE /* WriteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDataService.swift; sourceTree = "<group>"; };
 		EC252D5D2667239D002011FE /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
@@ -62,6 +65,11 @@
 		EC2D7C322642E1BC00FB8F3D /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		EC2D7C342642E1F100FB8F3D /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		EC2D7C362642E52000FB8F3D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		EC3A939A2669F8E600E7454F /* Muzzez School.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Muzzez School.entitlements"; sourceTree = "<group>"; };
+		EC624A21266B3E3F005B7834 /* MyCourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCard.swift; sourceTree = "<group>"; };
+		EC624A24266B4262005B7834 /* DoneBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneBuyView.swift; sourceTree = "<group>"; };
+		EC624A28266B51B3005B7834 /* MyCourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseDetailView.swift; sourceTree = "<group>"; };
+		EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurikulumDetailView.swift; sourceTree = "<group>"; };
 		EC7CD07D2664CAE800DBB38E /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		EC7CD0802665114300DBB38E /* LoadDataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataUser.swift; sourceTree = "<group>"; };
 		ECCBC2942639210D0022714F /* Muzzez School.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muzzez School.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,7 +79,8 @@
 		ECCBC29E263921100022714F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ECCBC2A0263921100022714F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECCBC2A9263930700022714F /* DaftarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaftarContentView.swift; sourceTree = "<group>"; };
-		ECE5698C2661C3B6008DD061 /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		ECE27DEB26691CCB00917E85 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		ECE27DEE2669D1C200917E85 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		ECE5698F2661CADD008DD061 /* CourseLstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseLstView.swift; sourceTree = "<group>"; };
 		ECE569A82661E4E8008DD061 /* LoadDataCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataCourse.swift; sourceTree = "<group>"; };
 		ECE569CD26629578008DD061 /* LoadTipsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTipsData.swift; sourceTree = "<group>"; };
@@ -84,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95912FAC32515452C42F82D8 /* Pods_Muzzez_School.framework in Frameworks */,
+				ECE27DEC26691CCB00917E85 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +103,7 @@
 		07CF4F814218EE8C33E85B8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ECE27DEB26691CCB00917E85 /* StoreKit.framework */,
 				619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */,
 			);
 			name = Frameworks;
@@ -115,11 +126,10 @@
 				EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */,
 				EC0DBF5F264F67C2004C98B9 /* Indicator.swift */,
 				EC0DBF60264F67C2004C98B9 /* NavigationBarColor.swift */,
-				EC0DBF66264F6DB3004C98B9 /* CourseCellView.swift */,
-				ECE5698C2661C3B6008DD061 /* CartButton.swift */,
 				ECE5698F2661CADD008DD061 /* CourseLstView.swift */,
 				EC252D2B266608DC002011FE /* KurikulumCard.swift */,
 				EC252D60266723B3002011FE /* WishlistCard.swift */,
+				EC624A21266B3E3F005B7834 /* MyCourseCard.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -145,6 +155,9 @@
 				EC2D7C362642E52000FB8F3D /* DetailView.swift */,
 				EC0DBF64264F67D6004C98B9 /* Component */,
 				EC252D5D2667239D002011FE /* WishlistView.swift */,
+				EC624A24266B4262005B7834 /* DoneBuyView.swift */,
+				EC624A28266B51B3005B7834 /* MyCourseDetailView.swift */,
+				EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +204,8 @@
 		ECCBC2962639210D0022714F /* Muzzez School */ = {
 			isa = PBXGroup;
 			children = (
+				EC3A939A2669F8E600E7454F /* Muzzez School.entitlements */,
+				ECE27DED2669D1A900917E85 /* StoreManager */,
 				ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */,
 				EC2D7C20264228B500FB8F3D /* Model */,
 				EC2D7C1F264228AA00FB8F3D /* View */,
@@ -209,6 +224,14 @@
 				ECCBC29E263921100022714F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ECE27DED2669D1A900917E85 /* StoreManager */ = {
+			isa = PBXGroup;
+			children = (
+				ECE27DEE2669D1C200917E85 /* StoreManager.swift */,
+			);
+			path = StoreManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,7 +350,7 @@
 			files = (
 				ECCBC29A2639210D0022714F /* LoginContentView.swift in Sources */,
 				EC252D2C266608DC002011FE /* KurikulumCard.swift in Sources */,
-				EC0DBF67264F6DB3004C98B9 /* CourseCellView.swift in Sources */,
+				EC624A29266B51B3005B7834 /* MyCourseDetailView.swift in Sources */,
 				EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */,
 				EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */,
 				EC2D7C2D264248CF00FB8F3D /* CourseDetailView.swift in Sources */,
@@ -336,20 +359,23 @@
 				EC252D61266723B3002011FE /* WishlistCard.swift in Sources */,
 				EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */,
 				ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */,
-				ECE5698D2661C3B6008DD061 /* CartButton.swift in Sources */,
 				EC0DBF63264F67C2004C98B9 /* NavigationBarColor.swift in Sources */,
+				EC624A25266B4262005B7834 /* DoneBuyView.swift in Sources */,
 				EC7CD07E2664CAE800DBB38E /* Users.swift in Sources */,
 				EC252D5E2667239D002011FE /* WishlistView.swift in Sources */,
+				EC624A22266B3E3F005B7834 /* MyCourseCard.swift in Sources */,
 				EC0DBF61264F67C2004C98B9 /* CustomPresentViewController.swift in Sources */,
 				EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */,
 				EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */,
 				EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
+				EC624A2C266B5384005B7834 /* KurikulumDetailView.swift in Sources */,
 				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,
 				ECE569A92661E4E8008DD061 /* LoadDataCourse.swift in Sources */,
 				ECE569902661CADD008DD061 /* CourseLstView.swift in Sources */,
 				EC0DBF62264F67C2004C98B9 /* Indicator.swift in Sources */,
 				EC7CD0812665114300DBB38E /* LoadDataUser.swift in Sources */,
+				ECE27DEF2669D1C200917E85 /* StoreManager.swift in Sources */,
 				EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */,
 				ECE569CE26629579008DD061 /* LoadTipsData.swift in Sources */,
 			);
@@ -480,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Muzzez School/Muzzez School.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Muzzez School/Preview Content\"";
 				DEVELOPMENT_TEAM = 6M5M727687;
@@ -492,6 +519,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gusadi.Muzzez-School";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -503,6 +531,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Muzzez School/Muzzez School.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Muzzez School/Preview Content\"";
 				DEVELOPMENT_TEAM = 6M5M727687;
@@ -515,6 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gusadi.Muzzez-School";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

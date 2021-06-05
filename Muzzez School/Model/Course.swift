@@ -12,7 +12,7 @@ struct Courses: Identifiable, Codable {
   var id: Int
   var nama: String
   var image: String
-  var harga: Int
+  var harga: String
   var rating: Double
   var deskripsi: String
   var complete: Bool

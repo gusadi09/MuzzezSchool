@@ -13,16 +13,6 @@ struct Users: Identifiable {
   var id: String
   var nama: String
   var image: String
-  var cart: [Cart]?
   var wishlist: [Courses]?
   var course: [Courses]?
-}
-
-struct Cart: Codable, Identifiable {
-  var id = UUID()
-  var nama: String
-  var image: String
-  var harga: Int
-  var rating: Double
-  var deskripsi: String
 }

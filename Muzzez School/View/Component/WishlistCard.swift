@@ -11,6 +11,8 @@ import Kingfisher
 struct WishlistCard: View {
   
   var item: Courses?
+  var harga = ""
+  @StateObject var storeManager = StoreManager()
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -33,7 +35,7 @@ struct WishlistCard: View {
         .padding(.top)
       
       HStack {
-        Text("Rp. \(item?.harga ?? 0)")
+        Text("\(self.storeManager.myProducts?.localizedPrice ?? "")")
           .font(.system(size: 20))
           .padding(.horizontal)
         
@@ -60,6 +62,9 @@ struct WishlistCard: View {
     .cornerRadius(30)
     .frame(height: 325)
     .shadow(color: Color.black.opacity(0.1), radius: 20, x: 0, y: 4)
+    .onAppear(perform: {
+      self.storeManager.getProducts(productIDs: harga)
+    })
   }
 }
 

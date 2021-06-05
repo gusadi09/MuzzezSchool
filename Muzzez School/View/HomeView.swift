@@ -10,7 +10,6 @@ import NavigationStack
 
 struct HomeView: View {
   
-  
   var body: some View {
     
     TabView {
@@ -19,7 +18,7 @@ struct HomeView: View {
           Image(systemName: "house")
           Text("Home")
         }
-      
+  
       Text("Search")
         .tabItem {
           Image(systemName: "magnifyingglass")
