@@ -35,6 +35,7 @@ struct LoginContentView: View {
   @State var isActive: Bool = false
   var onCommit: (()->Void)?
   @State var isActiveView: Bool = false
+  @State var show: Bool = false
   
   @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
   
@@ -99,6 +100,17 @@ struct LoginContentView: View {
               })
             }
             
+            if self.show {
+              Text("Email/Password Salah!")
+                .font(.system(size: 12))
+                .foregroundColor(.red)
+            } else {
+              Text("")
+                .font(.system(size: 12))
+                .foregroundColor(.red)
+                .hidden()
+            }
+            
             Button(action: {
               login()
               
@@ -123,7 +135,14 @@ struct LoginContentView: View {
                 label: {
                   Text("Daftar").font(.callout).bold()
                     .foregroundColor(.red)
-                }).isDetailLink(false)
+                })
+                .isDetailLink(false)
+                .onAppear(perform: {
+                  DispatchQueue.main.async {
+                    self.email = ""
+                    self.password = ""
+                  }
+                })
             }
           }
           .padding(.all, 30)
@@ -134,13 +153,18 @@ struct LoginContentView: View {
         }.padding(.bottom, 150)
       }
     }
+    
     .navigationBarBackButtonHidden(true)
     .navigationBarHidden(true)
   }
+  
   func login() {
     Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
       if error != nil {
         print(error?.localizedDescription ?? "")
+        DispatchQueue.main.async {
+          self.show.toggle()
+        }
       } else {
         print("success")
         DispatchQueue.main.async {
@@ -152,6 +176,7 @@ struct LoginContentView: View {
       }
     }
   }
+  
 }
 
 struct LoginContentView_Previews: PreviewProvider {

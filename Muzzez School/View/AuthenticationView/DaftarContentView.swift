@@ -131,7 +131,6 @@ struct DaftarContentView: View {
             
             HStack {
               Button(action: {
-                print("forgot")
                 toogle()
               }, label: {
                 HStack {
@@ -146,11 +145,11 @@ struct DaftarContentView: View {
             }
             
             if self.show {
-              Text("Password tidak sama dengan konfirmasi password, mohon periksa dengan baik!")
+              Text("Mohon periksa semua field dengan baik!")
                 .font(.system(size: 12))
                 .foregroundColor(.red)
             } else {
-              Text("Password tidak sama dengan konfirmasi password, mohon periksa dengan baik!")
+              Text("")
                 .font(.system(size: 12))
                 .foregroundColor(.red)
                 .hidden()
@@ -198,7 +197,7 @@ struct DaftarContentView: View {
   }
   
   func register() {
-    if password == rePass {
+    if password == rePass && isChecked {
       Auth.auth().createUser(withEmail: email, password: password) { result, err in
         if err != nil {
           print(err?.localizedDescription ?? "")

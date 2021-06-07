@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		723C12023C449C88E22BA40D /* Pods_Muzzez_SchoolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EA779D8CCB8BB555BB78C4 /* Pods_Muzzez_SchoolTests.framework */; };
 		95912FAC32515452C42F82D8 /* Pods_Muzzez_School.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */; };
 		EC0DBF61264F67C2004C98B9 /* CustomPresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */; };
 		EC0DBF62264F67C2004C98B9 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DBF5F264F67C2004C98B9 /* Indicator.swift */; };
@@ -15,8 +16,13 @@
 		EC252D5A26671E49002011FE /* WriteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252D5926671E48002011FE /* WriteDataService.swift */; };
 		EC252D5E2667239D002011FE /* WishlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252D5D2667239D002011FE /* WishlistView.swift */; };
 		EC252D61266723B3002011FE /* WishlistCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC252D60266723B3002011FE /* WishlistCard.swift */; };
+		EC2713C0266CA2A0001B5CBB /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2713BF266CA2A0001B5CBB /* VideoPlayerView.swift */; };
+		EC2713C3266D2F3F001B5CBB /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2713C2266D2F3F001B5CBB /* SearchView.swift */; };
+		EC2713CC266DFAB7001B5CBB /* Muzzez_SchoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2713CB266DFAB7001B5CBB /* Muzzez_SchoolTests.swift */; };
+		EC27149A266E0531001B5CBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC271499266E0531001B5CBB /* GoogleService-Info.plist */; };
+		EC27149E266E339C001B5CBB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27149D266E339C001B5CBB /* SearchBar.swift */; };
+		EC2714A2266E416B001B5CBB /* SearchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2714A1266E416B001B5CBB /* SearchCard.swift */; };
 		EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C222642292F00FB8F3D /* HomeView.swift */; };
-		EC2D7C252642325900FB8F3D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */; };
 		EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C262642381E00FB8F3D /* AccountView.swift */; };
 		EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2826423D3500FB8F3D /* CourseView.swift */; };
 		EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */; };
@@ -44,7 +50,20 @@
 		ECE569CE26629579008DD061 /* LoadTipsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE569CD26629578008DD061 /* LoadTipsData.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EC2713CE266DFAB8001B5CBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECCBC28C2639210D0022714F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECCBC2932639210D0022714F;
+			remoteInfo = "Muzzez School";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0C7CF42DC117439711368170 /* Pods-Muzzez SchoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muzzez SchoolTests.debug.xcconfig"; path = "Target Support Files/Pods-Muzzez SchoolTests/Pods-Muzzez SchoolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39EA779D8CCB8BB555BB78C4 /* Pods_Muzzez_SchoolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muzzez_SchoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B4B94086A586C53A078411 /* Pods-Muzzez SchoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muzzez SchoolTests.release.xcconfig"; path = "Target Support Files/Pods-Muzzez SchoolTests/Pods-Muzzez SchoolTests.release.xcconfig"; sourceTree = "<group>"; };
 		619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muzzez_School.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85C8C719712C609A8C368C76 /* Pods-Muzzez School.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muzzez School.release.xcconfig"; path = "Target Support Files/Pods-Muzzez School/Pods-Muzzez School.release.xcconfig"; sourceTree = "<group>"; };
 		EC0DBF5E264F67C2004C98B9 /* CustomPresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentViewController.swift; sourceTree = "<group>"; };
@@ -54,8 +73,15 @@
 		EC252D5926671E48002011FE /* WriteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDataService.swift; sourceTree = "<group>"; };
 		EC252D5D2667239D002011FE /* WishlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistView.swift; sourceTree = "<group>"; };
 		EC252D60266723B3002011FE /* WishlistCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistCard.swift; sourceTree = "<group>"; };
+		EC2713BF266CA2A0001B5CBB /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		EC2713C2266D2F3F001B5CBB /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		EC2713C9266DFAB7001B5CBB /* Muzzez SchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Muzzez SchoolTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2713CB266DFAB7001B5CBB /* Muzzez_SchoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muzzez_SchoolTests.swift; sourceTree = "<group>"; };
+		EC2713CD266DFAB7001B5CBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC271499266E0531001B5CBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC27149D266E339C001B5CBB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		EC2714A1266E416B001B5CBB /* SearchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCard.swift; sourceTree = "<group>"; };
 		EC2D7C222642292F00FB8F3D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC2D7C262642381E00FB8F3D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		EC2D7C2826423D3500FB8F3D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		EC2D7C2A26423DFB00FB8F3D /* HomeFrstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFrstView.swift; sourceTree = "<group>"; };
@@ -88,6 +114,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC2713C6266DFAB7001B5CBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				723C12023C449C88E22BA40D /* Pods_Muzzez_SchoolTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECCBC2912639210D0022714F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -105,6 +139,7 @@
 			children = (
 				ECE27DEB26691CCB00917E85 /* StoreKit.framework */,
 				619CC5ED2DC07B1F0C226D52 /* Pods_Muzzez_School.framework */,
+				39EA779D8CCB8BB555BB78C4 /* Pods_Muzzez_SchoolTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +149,8 @@
 			children = (
 				FDE74F1EF4A7AD97A807B5FE /* Pods-Muzzez School.debug.xcconfig */,
 				85C8C719712C609A8C368C76 /* Pods-Muzzez School.release.xcconfig */,
+				0C7CF42DC117439711368170 /* Pods-Muzzez SchoolTests.debug.xcconfig */,
+				56B4B94086A586C53A078411 /* Pods-Muzzez SchoolTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -130,6 +167,9 @@
 				EC252D2B266608DC002011FE /* KurikulumCard.swift */,
 				EC252D60266723B3002011FE /* WishlistCard.swift */,
 				EC624A21266B3E3F005B7834 /* MyCourseCard.swift */,
+				EC2713BF266CA2A0001B5CBB /* VideoPlayerView.swift */,
+				EC27149D266E339C001B5CBB /* SearchBar.swift */,
+				EC2714A1266E416B001B5CBB /* SearchCard.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -141,6 +181,15 @@
 				ECCBC2A9263930700022714F /* DaftarContentView.swift */,
 			);
 			path = AuthenticationView;
+			sourceTree = "<group>";
+		};
+		EC2713CA266DFAB7001B5CBB /* Muzzez SchoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC2713CB266DFAB7001B5CBB /* Muzzez_SchoolTests.swift */,
+				EC2713CD266DFAB7001B5CBB /* Info.plist */,
+			);
+			path = "Muzzez SchoolTests";
 			sourceTree = "<group>";
 		};
 		EC2D7C1F264228AA00FB8F3D /* View */ = {
@@ -158,6 +207,7 @@
 				EC624A24266B4262005B7834 /* DoneBuyView.swift */,
 				EC624A28266B51B3005B7834 /* MyCourseDetailView.swift */,
 				EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */,
+				EC2713C2266D2F3F001B5CBB /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				ECCBC2962639210D0022714F /* Muzzez School */,
+				EC2713CA266DFAB7001B5CBB /* Muzzez SchoolTests */,
 				ECCBC2952639210D0022714F /* Products */,
 				68F6818421117A439927D70C /* Pods */,
 				07CF4F814218EE8C33E85B8C /* Frameworks */,
@@ -197,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				ECCBC2942639210D0022714F /* Muzzez School.app */,
+				EC2713C9266DFAB7001B5CBB /* Muzzez SchoolTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,7 +263,7 @@
 				EC2D7C1F264228AA00FB8F3D /* View */,
 				EC2D7C21264228BF00FB8F3D /* Services */,
 				ECCBC29B263921100022714F /* Assets.xcassets */,
-				EC2D7C242642325900FB8F3D /* GoogleService-Info.plist */,
+				EC271499266E0531001B5CBB /* GoogleService-Info.plist */,
 				ECCBC2A0263921100022714F /* Info.plist */,
 				ECCBC29D263921100022714F /* Preview Content */,
 			);
@@ -237,6 +289,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EC2713C8266DFAB7001B5CBB /* Muzzez SchoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC2713D0266DFAB8001B5CBB /* Build configuration list for PBXNativeTarget "Muzzez SchoolTests" */;
+			buildPhases = (
+				B3A6EF543FF8AAD4E3F48658 /* [CP] Check Pods Manifest.lock */,
+				EC2713C5266DFAB7001B5CBB /* Sources */,
+				EC2713C6266DFAB7001B5CBB /* Frameworks */,
+				EC2713C7266DFAB7001B5CBB /* Resources */,
+				498A99329B78CA72183FB3D1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC2713CF266DFAB8001B5CBB /* PBXTargetDependency */,
+			);
+			name = "Muzzez SchoolTests";
+			productName = "Muzzez SchoolTests";
+			productReference = EC2713C9266DFAB7001B5CBB /* Muzzez SchoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ECCBC2932639210D0022714F /* Muzzez School */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECCBC2A3263921100022714F /* Build configuration list for PBXNativeTarget "Muzzez School" */;
@@ -265,6 +337,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					EC2713C8266DFAB7001B5CBB = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = ECCBC2932639210D0022714F;
+					};
 					ECCBC2932639210D0022714F = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -284,18 +360,26 @@
 			projectRoot = "";
 			targets = (
 				ECCBC2932639210D0022714F /* Muzzez School */,
+				EC2713C8266DFAB7001B5CBB /* Muzzez SchoolTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EC2713C7266DFAB7001B5CBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECCBC2922639210D0022714F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECCBC29F263921100022714F /* Preview Assets.xcassets in Resources */,
 				ECCBC29C263921100022714F /* Assets.xcassets in Resources */,
-				EC2D7C252642325900FB8F3D /* GoogleService-Info.plist in Resources */,
+				EC27149A266E0531001B5CBB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +408,45 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		498A99329B78CA72183FB3D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Muzzez SchoolTests/Pods-Muzzez SchoolTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Muzzez SchoolTests/Pods-Muzzez SchoolTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Muzzez SchoolTests/Pods-Muzzez SchoolTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A6EF543FF8AAD4E3F48658 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Muzzez SchoolTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EE20FA82D7E5083C3F6F0E0F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +467,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC2713C5266DFAB7001B5CBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC2713CC266DFAB7001B5CBB /* Muzzez_SchoolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECCBC2902639210D0022714F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +488,7 @@
 				EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */,
 				EC252D5A26671E49002011FE /* WriteDataService.swift in Sources */,
 				EC252D61266723B3002011FE /* WishlistCard.swift in Sources */,
+				EC2713C0266CA2A0001B5CBB /* VideoPlayerView.swift in Sources */,
 				EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */,
 				ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */,
 				EC0DBF63264F67C2004C98B9 /* NavigationBarColor.swift in Sources */,
@@ -367,14 +499,17 @@
 				EC0DBF61264F67C2004C98B9 /* CustomPresentViewController.swift in Sources */,
 				EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */,
 				EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */,
+				EC27149E266E339C001B5CBB /* SearchBar.swift in Sources */,
 				EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
 				EC624A2C266B5384005B7834 /* KurikulumDetailView.swift in Sources */,
 				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,
 				ECE569A92661E4E8008DD061 /* LoadDataCourse.swift in Sources */,
 				ECE569902661CADD008DD061 /* CourseLstView.swift in Sources */,
+				EC2714A2266E416B001B5CBB /* SearchCard.swift in Sources */,
 				EC0DBF62264F67C2004C98B9 /* Indicator.swift in Sources */,
 				EC7CD0812665114300DBB38E /* LoadDataUser.swift in Sources */,
+				EC2713C3266D2F3F001B5CBB /* SearchView.swift in Sources */,
 				ECE27DEF2669D1C200917E85 /* StoreManager.swift in Sources */,
 				EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */,
 				ECE569CE26629579008DD061 /* LoadTipsData.swift in Sources */,
@@ -383,7 +518,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		EC2713CF266DFAB8001B5CBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECCBC2932639210D0022714F /* Muzzez School */;
+			targetProxy = EC2713CE266DFAB8001B5CBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		EC2713D1266DFAB8001B5CBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7CF42DC117439711368170 /* Pods-Muzzez SchoolTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6M5M727687;
+				INFOPLIST_FILE = "Muzzez SchoolTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gusadi.Muzzez-SchoolTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Muzzez School.app/Muzzez School";
+			};
+			name = Debug;
+		};
+		EC2713D2266DFAB8001B5CBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B4B94086A586C53A078411 /* Pods-Muzzez SchoolTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6M5M727687;
+				INFOPLIST_FILE = "Muzzez SchoolTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gusadi.Muzzez-SchoolTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Muzzez School.app/Muzzez School";
+			};
+			name = Release;
+		};
 		ECCBC2A1263921100022714F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -512,7 +697,7 @@
 				DEVELOPMENT_TEAM = 6M5M727687;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Muzzez School/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,7 +722,7 @@
 				DEVELOPMENT_TEAM = 6M5M727687;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Muzzez School/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,6 +738,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC2713D0266DFAB8001B5CBB /* Build configuration list for PBXNativeTarget "Muzzez SchoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC2713D1266DFAB8001B5CBB /* Debug */,
+				EC2713D2266DFAB8001B5CBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ECCBC28F2639210D0022714F /* Build configuration list for PBXProject "Muzzez School" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

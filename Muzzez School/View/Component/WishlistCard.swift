@@ -41,19 +41,15 @@ struct WishlistCard: View {
         
         Spacer()
         
-        Image(systemName: "heart.fill")
-          .padding()
-          .foregroundColor(.red)
-        
-//        if item?.isWishlist ?? true {
-//          Image(systemName: "heart.fill")
-//            .padding()
-//            .foregroundColor(.red)
-//        } else {
-//          Image(systemName: "heart")
-//            .padding()
-//            .foregroundColor(.red)
-//        }
+        if item?.isWishlist ?? true {
+          Image(systemName: "heart.fill")
+            .padding()
+            .foregroundColor(.red)
+        } else {
+          Image(systemName: "heart")
+            .padding()
+            .foregroundColor(.red)
+        }
       }
       .padding(.horizontal)
       .padding(.bottom)

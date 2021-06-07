@@ -55,6 +55,15 @@ struct MyCourseDetailView: View {
           VStack {
             ForEach(item?.kurikulum ?? [], id: \.id) { items in
               KurikulumCard(items: items)
+                .onTapGesture {
+                  DispatchQueue.main.async {
+                    self.viewController?.present(style: .fullScreen, builder: {
+                      KurikulumDetailView(item: items)
+                        .ignoresSafeArea()
+                    })
+                    
+                  }
+                }
             }
           }
           .padding()

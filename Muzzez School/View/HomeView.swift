@@ -19,7 +19,7 @@ struct HomeView: View {
           Text("Home")
         }
   
-      Text("Search")
+      SearchView()
         .tabItem {
           Image(systemName: "magnifyingglass")
           Text("Search")
