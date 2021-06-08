@@ -32,7 +32,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string>logos</string>
+		<string>logo-red</string>
 	</dict>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

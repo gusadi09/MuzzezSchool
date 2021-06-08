@@ -63,6 +63,29 @@ struct AccountView: View {
         
         HStack {
           Spacer()
+          Button(action: {
+            DispatchQueue.main.async {
+              self.viewController?.present(style: .fullScreen, builder: {
+                EditAkunView(items: dataUser.data, nama: dataUser.data?.nama ?? "")
+                  .ignoresSafeArea()
+              })
+            }
+          }, label: {
+            Text("Edit Profile")
+              .font(.system(size: 18))
+              .fontWeight(.bold)
+              .foregroundColor(.white)
+              .padding()
+          })
+          Spacer()
+        }
+        .background(Color(.systemBlue))
+        .cornerRadius(10)
+        .padding(.horizontal, 30)
+        .padding(.bottom, 30)
+        
+        HStack {
+          Spacer()
           Button(action: {logout()}, label: {
             Text("Logout")
               .font(.system(size: 18))
@@ -97,6 +120,7 @@ struct AccountView: View {
       print ("Error signing out: %@", signOutError)
     }
   }
+  
 }
 
 struct AccountView_Previews: PreviewProvider {

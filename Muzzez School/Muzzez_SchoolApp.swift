@@ -27,8 +27,10 @@ struct Muzzez_SchoolApp: App {
         WindowGroup {
           if Auth.auth().currentUser != nil {
             HomeView()
+              .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
           } else {
             LoginContentView()
+              .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
           }
         }
     }

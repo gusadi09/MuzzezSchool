@@ -9,5 +9,14 @@ target 'Muzzez School' do
   pod 'NavigationStack'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Kingfisher'
+
+  target 'Muzzez SchoolTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Firebase/Auth'
+    pod 'Firebase/Firestore'
+  end
 
 end

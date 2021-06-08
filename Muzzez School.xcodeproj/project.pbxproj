@@ -22,6 +22,7 @@
 		EC27149A266E0531001B5CBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC271499266E0531001B5CBB /* GoogleService-Info.plist */; };
 		EC27149E266E339C001B5CBB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27149D266E339C001B5CBB /* SearchBar.swift */; };
 		EC2714A2266E416B001B5CBB /* SearchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2714A1266E416B001B5CBB /* SearchCard.swift */; };
+		EC2714B2266E537F001B5CBB /* EditAkunView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2714B1266E537F001B5CBB /* EditAkunView.swift */; };
 		EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C222642292F00FB8F3D /* HomeView.swift */; };
 		EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C262642381E00FB8F3D /* AccountView.swift */; };
 		EC2D7C2926423D3500FB8F3D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C2826423D3500FB8F3D /* CourseView.swift */; };
@@ -32,6 +33,7 @@
 		EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C322642E1BC00FB8F3D /* Course.swift */; };
 		EC2D7C352642E1F100FB8F3D /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C342642E1F100FB8F3D /* Tips.swift */; };
 		EC2D7C372642E52200FB8F3D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2D7C362642E52000FB8F3D /* DetailView.swift */; };
+		EC4F7AA7266F06F000AAFA65 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F7AA6266F06F000AAFA65 /* UIApplicationExtension.swift */; };
 		EC624A22266B3E3F005B7834 /* MyCourseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A21266B3E3F005B7834 /* MyCourseCard.swift */; };
 		EC624A25266B4262005B7834 /* DoneBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A24266B4262005B7834 /* DoneBuyView.swift */; };
 		EC624A29266B51B3005B7834 /* MyCourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A28266B51B3005B7834 /* MyCourseDetailView.swift */; };
@@ -81,6 +83,7 @@
 		EC271499266E0531001B5CBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC27149D266E339C001B5CBB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		EC2714A1266E416B001B5CBB /* SearchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCard.swift; sourceTree = "<group>"; };
+		EC2714B1266E537F001B5CBB /* EditAkunView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAkunView.swift; sourceTree = "<group>"; };
 		EC2D7C222642292F00FB8F3D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EC2D7C262642381E00FB8F3D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		EC2D7C2826423D3500FB8F3D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		EC2D7C342642E1F100FB8F3D /* Tips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
 		EC2D7C362642E52000FB8F3D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		EC3A939A2669F8E600E7454F /* Muzzez School.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Muzzez School.entitlements"; sourceTree = "<group>"; };
+		EC4F7AA6266F06F000AAFA65 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		EC624A21266B3E3F005B7834 /* MyCourseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseCard.swift; sourceTree = "<group>"; };
 		EC624A24266B4262005B7834 /* DoneBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneBuyView.swift; sourceTree = "<group>"; };
 		EC624A28266B51B3005B7834 /* MyCourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCourseDetailView.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 				EC624A28266B51B3005B7834 /* MyCourseDetailView.swift */,
 				EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */,
 				EC2713C2266D2F3F001B5CBB /* SearchView.swift */,
+				EC2714B1266E537F001B5CBB /* EditAkunView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +238,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		EC4F7AA5266F06D700AAFA65 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F7AA6266F06F000AAFA65 /* UIApplicationExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		ECCBC28B2639210D0022714F = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +269,7 @@
 		ECCBC2962639210D0022714F /* Muzzez School */ = {
 			isa = PBXGroup;
 			children = (
+				EC4F7AA5266F06D700AAFA65 /* Extension */,
 				EC3A939A2669F8E600E7454F /* Muzzez School.entitlements */,
 				ECE27DED2669D1A900917E85 /* StoreManager */,
 				ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */,
@@ -485,6 +499,7 @@
 				EC2D7C332642E1BD00FB8F3D /* Course.swift in Sources */,
 				EC2D7C232642292F00FB8F3D /* HomeView.swift in Sources */,
 				EC2D7C2D264248CF00FB8F3D /* CourseDetailView.swift in Sources */,
+				EC4F7AA7266F06F000AAFA65 /* UIApplicationExtension.swift in Sources */,
 				EC2D7C2B26423DFB00FB8F3D /* HomeFrstView.swift in Sources */,
 				EC252D5A26671E49002011FE /* WriteDataService.swift in Sources */,
 				EC252D61266723B3002011FE /* WishlistCard.swift in Sources */,
@@ -501,6 +516,7 @@
 				EC2D7C2F2642494E00FB8F3D /* BlurView.swift in Sources */,
 				EC27149E266E339C001B5CBB /* SearchBar.swift in Sources */,
 				EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */,
+				EC2714B2266E537F001B5CBB /* EditAkunView.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
 				EC624A2C266B5384005B7834 /* KurikulumDetailView.swift in Sources */,
 				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,
