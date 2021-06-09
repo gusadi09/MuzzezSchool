@@ -36,6 +36,7 @@ struct LoginContentView: View {
   var onCommit: (()->Void)?
   @State var isActiveView: Bool = false
   @State var show: Bool = false
+  @State var errorStats = ""
   
   @Environment(\.viewController) private var viewControllerHolder: ViewControllerHolder
   
@@ -100,17 +101,6 @@ struct LoginContentView: View {
               })
             }
             
-            if self.show {
-              Text("Email/Password Salah!")
-                .font(.system(size: 12))
-                .foregroundColor(.red)
-            } else {
-              Text("")
-                .font(.system(size: 12))
-                .foregroundColor(.red)
-                .hidden()
-            }
-            
             Button(action: {
               login()
               
@@ -125,6 +115,9 @@ struct LoginContentView: View {
             .background(Color.red)
             .cornerRadius(10)
             .foregroundColor(.white)
+            .alert(isPresented: $show) { () -> Alert in
+              Alert(title: Text("Error"), message: Text(errorStats), dismissButton: .cancel(Text("OK")))
+            }
             
             HStack {
               Text("Belum punya akun?")
@@ -162,6 +155,7 @@ struct LoginContentView: View {
     Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
       if error != nil {
         print(error?.localizedDescription ?? "")
+        self.errorStats = error?.localizedDescription ?? ""
         DispatchQueue.main.async {
           self.show.toggle()
         }
@@ -175,6 +169,10 @@ struct LoginContentView: View {
         }
       }
     }
+  }
+  
+  func forgetPassword() {
+    
   }
   
 }

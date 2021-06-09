@@ -40,6 +40,7 @@
 		EC624A2C266B5384005B7834 /* KurikulumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */; };
 		EC7CD07E2664CAE800DBB38E /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD07D2664CAE800DBB38E /* Users.swift */; };
 		EC7CD0812665114300DBB38E /* LoadDataUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7CD0802665114300DBB38E /* LoadDataUser.swift */; };
+		ECC6C4E826706733004A9318 /* KebijakanPrivasiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6C4E726706733004A9318 /* KebijakanPrivasiView.swift */; };
 		ECCBC2982639210D0022714F /* Muzzez_SchoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */; };
 		ECCBC29A2639210D0022714F /* LoginContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCBC2992639210D0022714F /* LoginContentView.swift */; };
 		ECCBC29C263921100022714F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECCBC29B263921100022714F /* Assets.xcassets */; };
@@ -102,6 +103,7 @@
 		EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KurikulumDetailView.swift; sourceTree = "<group>"; };
 		EC7CD07D2664CAE800DBB38E /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		EC7CD0802665114300DBB38E /* LoadDataUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDataUser.swift; sourceTree = "<group>"; };
+		ECC6C4E726706733004A9318 /* KebijakanPrivasiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KebijakanPrivasiView.swift; sourceTree = "<group>"; };
 		ECCBC2942639210D0022714F /* Muzzez School.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muzzez School.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCBC2972639210D0022714F /* Muzzez_SchoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Muzzez_SchoolApp.swift; sourceTree = "<group>"; };
 		ECCBC2992639210D0022714F /* LoginContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginContentView.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				EC624A2B266B5384005B7834 /* KurikulumDetailView.swift */,
 				EC2713C2266D2F3F001B5CBB /* SearchView.swift */,
 				EC2714B1266E537F001B5CBB /* EditAkunView.swift */,
+				ECC6C4E726706733004A9318 /* KebijakanPrivasiView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				EC27149E266E339C001B5CBB /* SearchBar.swift in Sources */,
 				EC2D7C312642DD9A00FB8F3D /* TipsCardView.swift in Sources */,
 				EC2714B2266E537F001B5CBB /* EditAkunView.swift in Sources */,
+				ECC6C4E826706733004A9318 /* KebijakanPrivasiView.swift in Sources */,
 				ECCBC2AA263930700022714F /* DaftarContentView.swift in Sources */,
 				EC624A2C266B5384005B7834 /* KurikulumDetailView.swift in Sources */,
 				EC2D7C272642381E00FB8F3D /* AccountView.swift in Sources */,

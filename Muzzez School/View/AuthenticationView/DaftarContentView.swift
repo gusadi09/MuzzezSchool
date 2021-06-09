@@ -36,6 +36,7 @@ struct DaftarContentView: View {
   @State var isChecked: Bool = false
   @State var isShowPass: Bool = false
   @State var show: Bool = false
+  @State var errorStats = ""
   var onCommit: (()->Void)?
   
   func toogle(){isChecked = !isChecked;}
@@ -137,22 +138,32 @@ struct DaftarContentView: View {
                   Image(isChecked ? "checkmark" : "uncheck")
                     .resizable()
                     .frame(width: 20, height: 20)
-                  Text("Saya setuju dengan ketentuan dan kebijakan Muzzez School").font(.caption)
-                    .foregroundColor(.black).lineLimit(nil).multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
-                  Spacer()
                 }
               })
-            }
-            
-            if self.show {
-              Text("Mohon periksa semua field dengan baik!")
-                .font(.system(size: 12))
-                .foregroundColor(.red)
-            } else {
-              Text("")
-                .font(.system(size: 12))
-                .foregroundColor(.red)
-                .hidden()
+              
+              Button(action: {
+                DispatchQueue.main.async {
+                  self.viewController?.present(style: .fullScreen, builder: {
+                    KebijakanPrivasiView()
+                      .ignoresSafeArea()
+                  })
+                }
+              }, label: {
+                HStack(spacing: 0) {
+                  Text("Saya setuju dengan ").font(.caption)
+                    .foregroundColor(.black).lineLimit(nil).multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
+                  Text("ketentuan dan kebijakan")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.red)
+                    .lineLimit(nil)
+                    .multilineTextAlignment(.leading)
+                    .fixedSize(horizontal: false, vertical: true)
+                }
+                
+              })
+              
+              Spacer()
             }
             
             
@@ -170,6 +181,10 @@ struct DaftarContentView: View {
             .background(Color.red)
             .cornerRadius(10)
             .foregroundColor(.white)
+            .alert(isPresented: $show) { () -> Alert in
+              Alert(title: Text("Error"), message: Text(errorStats), dismissButton: .cancel(Text("OK")))
+            }
+            
             
             HStack {
               Text("Sudah memiliki akun?")
@@ -201,6 +216,10 @@ struct DaftarContentView: View {
       Auth.auth().createUser(withEmail: email, password: password) { result, err in
         if err != nil {
           print(err?.localizedDescription ?? "")
+          self.errorStats = err?.localizedDescription ?? ""
+          DispatchQueue.main.async {
+            self.show.toggle()
+          }
         } else {
           print("success")
           DispatchQueue.main.async {
@@ -213,6 +232,11 @@ struct DaftarContentView: View {
         }
       }
     } else {
+      if password != rePass {
+        self.errorStats = "Confirm Password not match."
+      } else {
+        self.errorStats = "Terms and condition not approved"
+      }
       DispatchQueue.main.async {
         self.show.toggle()
       }
